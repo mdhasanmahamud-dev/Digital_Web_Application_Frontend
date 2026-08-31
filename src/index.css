@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Bangla Font */
+.font-bangla {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+/* English Heading Font */
+.font-heading {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* COUSTOM SIZE AND PADDING */
+.container-custom {
+  @apply max-w-7xl mx-auto px-6 py-10;
+}
+
+/* -----------------BACKGROUND COLOR----------------- */
+.bg-primary {
+  background-color: #061636;
+}
+.bg-secondary {
+  background-color: #030a1a;
+}
+.bg-dark {
+  background-color: #051129;
+}
+.bg-navy {
+  background-color: #011949;
+}
+.bg-accent {
+  background-color: #F0A010;
+}
+
+/* --------------CARD BACKGROUND COLOR---------------- */
+.bg-card-primary {
+  background-color: #0A1A3A;
+}
+
+.bg-card-secondary {
+  background-color: #07122a;
+}
+
+/* -----------------CARD HOVER COLOR----------------- */
+
+.bg-card-hover-primary:hover {
+  background-color: #0d234f; /* slightly lighter */
+}
+
+.bg-card-hover-secondary:hover {
+  background-color: #0b1b3f; /* slightly lighter */
+}
+
+/* -----------------HOVER COLOR----------------- */
+
+/* -----------------TEXT COLOR----------------- */
+.text-primary {
+  color: #F9A01B;
+}
+.text-secondary {
+  color: #a05100;
+}
+.text-navy {
+  color: #003366;
+}
+.text-white-soft {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.text-white-muted {
+  color: rgba(255, 255, 255, 0.6);
+}
+/* -----------------BORDER COLOR----------------- */
+.border-primary {
+  border-color: #003060;
+}
+
+/* =========================
+   BODY STYLE
+========================= */
+
+body {
+  background-color: #000000;
+  color: white;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
