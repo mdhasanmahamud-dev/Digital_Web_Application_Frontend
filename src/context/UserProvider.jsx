@@ -22,7 +22,7 @@ const UserProvider = ({ children }) => {
     const getMe = async () => {
       try {
         setLoading(true);
-        const res = await axiosInstance.get("/me", {
+        const res = await axios.get("http://localhost:5000/api/me", {
           withCredentials: true,
         });
 
@@ -44,12 +44,15 @@ const UserProvider = ({ children }) => {
     try {
       setLoading(true);
 
-      const res = await axiosInstance.post("/register", userData);
+      const res = await axios.post(
+        "http://localhost:5000/api/register",
+        userData,
+      );
 
       console.log(res.data);
 
       if (res.data.success) {
-        await refetch();
+        await refetch()
         showSuccess(res.data.success.message);
         return true;
       }
@@ -68,12 +71,12 @@ const UserProvider = ({ children }) => {
     try {
       setLoading(true);
 
-      await axiosInstance.post("/login", userData, {
+      await axios.post("http://localhost:5000/api/login", userData, {
         withCredentials: true,
       });
 
       // login এর পরে user load
-      const res = await axiosInstance.get("/me", {
+      const res = await axios.get("http://localhost:5000/api/me", {
         withCredentials: true,
       });
       setUser(res.data.user);
@@ -94,8 +97,8 @@ const UserProvider = ({ children }) => {
 
   const logoutUser = async () => {
     try {
-      await axiosInstance.post(
-        "/logout",
+      await axios.post(
+        "http://localhost:5000/api/logout",
         {},
         {
           withCredentials: true,
@@ -123,7 +126,7 @@ const UserProvider = ({ children }) => {
   } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axiosInstance.get("/users", {
+      const res = await axios.get("http://localhost:5000/api/users", {
         withCredentials: true,
       });
       return res.data.users;

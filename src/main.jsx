@@ -8,7 +8,7 @@ import UserProvider from "./context/UserProvider.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ContactProvider from "./context/ContactProvider.jsx";
 import ProjectProvider from "./context/ProjectProvider.jsx";
-import TeamProvider from "./context/TeamProvider.jsx";
+import TeamProvider from "./context/teamProvider.jsx";
 
 // Create a client
 const queryClient = new QueryClient();
