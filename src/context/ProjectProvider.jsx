@@ -43,7 +43,6 @@ const ProjectProvider = ({ children }) => {
       return res.data.data;
     },
   });
- console.log(projects)
   // =========================
   // GET ALL FEATURED PROJECT
   // =========================
