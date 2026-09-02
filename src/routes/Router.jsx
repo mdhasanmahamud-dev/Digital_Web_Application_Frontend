@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home/Home";
-import Login from "../pages/Auth/login";
+import SignIn from "../pages/Auth/SignIn";
 import Register from "../pages/Auth/Register";
 import DashboardHome from "../dashboard/DashboardHome/DashboardHome";
 import DashboardLayout from "../layouts/DashboardLayout";
@@ -14,6 +14,7 @@ import EditProject from "../dashboard/DashboardPages/DashboardProjects/EditProje
 import ProjectPages from "../pages/ProjectPages/ProjectPages";
 import TeamMembers from "../dashboard/DashboardPages/TeamMembers/TeamMembers";
 import AddMemberFrom from "../dashboard/DashboardPages/TeamMembers/AddMemberFrom";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />,
+        element: <SignIn />,
       },
       {
         path: "/register",
@@ -76,7 +77,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "addMember",
-        element : <AddMemberFrom/>
+        element: <AddMemberFrom />,
       },
     ],
   },

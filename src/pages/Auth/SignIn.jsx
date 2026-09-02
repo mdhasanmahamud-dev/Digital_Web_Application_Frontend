@@ -4,7 +4,7 @@ import { Mail, Lock, ArrowRight } from "lucide-react";
 import { NavLink, useNavigate } from "react-router";
 import { useUser } from "../../context/UserProvider";
 
-const Login = () => {
+const SignIn = () => {
   const {
     register,
     handleSubmit,
@@ -126,4 +126,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignIn;
