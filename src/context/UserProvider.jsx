@@ -22,7 +22,7 @@ const UserProvider = ({ children }) => {
     const getMe = async () => {
       try {
         setLoading(true);
-        const res = await axios.get("http://localhost:5000/api/me", {
+        const res = await axiosInstance.get("/me", {
           withCredentials: true,
         });
 
@@ -44,8 +44,8 @@ const UserProvider = ({ children }) => {
     try {
       setLoading(true);
 
-      const res = await axios.post(
-        "http://localhost:5000/api/register",
+      const res = await axiosInstance.post(
+        "/register",
         userData,
       );
 
@@ -71,12 +71,12 @@ const UserProvider = ({ children }) => {
     try {
       setLoading(true);
 
-      await axios.post("http://localhost:5000/api/login", userData, {
+      await axios.post("/login", userData, {
         withCredentials: true,
       });
 
       // login এর পরে user load
-      const res = await axios.get("http://localhost:5000/api/me", {
+      const res = await axios.get("/me", {
         withCredentials: true,
       });
       setUser(res.data.user);
@@ -98,7 +98,7 @@ const UserProvider = ({ children }) => {
   const logoutUser = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/api/logout",
+        "/logout",
         {},
         {
           withCredentials: true,
@@ -126,7 +126,7 @@ const UserProvider = ({ children }) => {
   } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axios.get("http://localhost:5000/api/users", {
+      const res = await axios.get("/users", {
         withCredentials: true,
       });
       return res.data.users;
