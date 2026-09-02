@@ -43,11 +43,6 @@ const DashboardSidebar = () => {
       icon: <Briefcase size={20} />,
     },
     {
-      name: "Services",
-      path: "/dashboard/services",
-      icon: <Layers3 size={20} />,
-    },
-    {
       name: "Team Members",
       path: "/dashboard/teamMember",
       icon: <UserCog size={20} />,
