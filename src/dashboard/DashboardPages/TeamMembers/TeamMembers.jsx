@@ -2,7 +2,7 @@ import React from "react";
 import DashboardTitle from "../../DashboardTitle/DashboardTitle";
 import TeamMemberTable from "./TeamMemberTable";
 import AddMemberButton from "./AddMemberButton";
-import { useTeam } from "../../../context/teamProvider";
+import { useTeam } from "../../../context/TeamMembersProvider";
 
 const TeamMembers = () => {
   const { team, teamLoading, deleteMember } = useTeam();

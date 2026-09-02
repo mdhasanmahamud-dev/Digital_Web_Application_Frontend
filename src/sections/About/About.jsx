@@ -1,5 +1,5 @@
 import React from "react";
-import { useTeam } from "../../context/teamProvider";
+import { useTeam } from "../../context/TeamMembersProvider";
 
 const About = () => {
   const { team } = useTeam();

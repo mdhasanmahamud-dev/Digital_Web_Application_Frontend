@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import DashboardTitle from "../../DashboardTitle/DashboardTitle";
-import { useTeam } from "../../../context/teamProvider";
+import { useTeam } from "../../../context/TeamMembersProvider";
 
 const AddMemberFrom = () => {
   const { register, handleSubmit, reset } = useForm();

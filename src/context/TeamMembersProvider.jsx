@@ -5,7 +5,7 @@ import { showError, showSuccess } from "../utils/showAlert";
 
 export const TeamContext = createContext(null);
 
-const TeamProvider = ({ children }) => {
+const TeamMembersProvider = ({ children }) => {
   // =========================
   // GET ALL TEAM
   // =========================
@@ -20,7 +20,7 @@ const TeamProvider = ({ children }) => {
       return res.data.data;
     },
   });
-  console.log(team)
+  console.log(team);
 
   // =========================
   // ADD MEMBER
@@ -67,7 +67,7 @@ const TeamProvider = ({ children }) => {
   );
 };
 
-export default TeamProvider;
+export default TeamMembersProvider;
 
 export const useTeam = () => {
   return useContext(TeamContext);
