@@ -71,12 +71,12 @@ const UserProvider = ({ children }) => {
     try {
       setLoading(true);
 
-      await axios.post("/login", userData, {
+      await axiosInstance.post("/login", userData, {
         withCredentials: true,
       });
 
       // login এর পরে user load
-      const res = await axios.get("/me", {
+      const res = await axiosInstance.get("/me", {
         withCredentials: true,
       });
       setUser(res.data.user);
@@ -97,7 +97,7 @@ const UserProvider = ({ children }) => {
 
   const logoutUser = async () => {
     try {
-      await axios.post(
+      await axiosInstance.post(
         "/logout",
         {},
         {
@@ -126,7 +126,7 @@ const UserProvider = ({ children }) => {
   } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axios.get("/users", {
+      const res = await axiosInstance.get("/users", {
         withCredentials: true,
       });
       return res.data.users;
