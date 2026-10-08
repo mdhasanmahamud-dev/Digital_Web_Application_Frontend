@@ -6,7 +6,13 @@ The application is built with **React, Vite, Tailwind CSS, React Router, TanStac
 
 ## 🔗 Live Link
 
-Live Demo: **Add your live link here**
+Live Demo: https://digital-web-application-frontend-1-7lab.onrender.com
+
+
+## Admin Login
+Use the following credentials to access the admin dashboard:
+Email: admin@gmail.com
+Password: Admin@1234
 
 ## 🛠 Tech Stack
 
